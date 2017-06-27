@@ -1,0 +1,10 @@
+label {
+  display: block;
+}
+
+label div {
+  float: left;
+  width: 200px;
+  text-align: right;
+  margin-right: 20px;
+}
