@@ -1,0 +1,26 @@
+<h1>{{messages.title}}</h1>
+<button routerLink="/customer" routerLinkActive="active">{{messages.addNewCustomer}}</button>
+<table>
+  <thead>
+    <tr>
+      <th (click)="sortBy('firstName')">{{currentSort === 'firstName' ? sortDirectionAscending ? 'v' : '^' : ''}} {{messages.firstName}}</th>
+      <th (click)="sortBy('lastName')">{{currentSort === 'lastName' ? sortDirectionAscending ? 'v' : '^' : ''}} {{messages.lastName}}</th>
+      <th (click)="sortBy('birthday')">{{currentSort === 'birthday' ? sortDirectionAscending ? 'v' : '^' : ''}} {{messages.age}}</th>
+      <th (click)="sortBy('gender')">{{currentSort === 'gender' ? sortDirectionAscending ? 'v' : '^' : ''}} {{messages.gender}}</th>
+      <th>{{messages.options}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let customer of data">
+      <td>{{customer.firstName}}</td>
+      <td>{{customer.lastName}}</td>
+      <td>{{getAge(customer.birthday)}}</td>
+      <td>{{customer.gender}}</td>
+      <td>
+        <button>{{messages.edit}}</button>
+        <button>{{messages.delete}}</button>
+        <button>{{messages.navi}}</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

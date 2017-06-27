@@ -1,27 +1,3 @@
 <!--The whole content below can be removed with the new code.-->
-<h1>{{title}}</h1>
-<button>{{addNewCustomer}}</button>
-<table>
-  <thead>
-    <tr>
-      <th>{{firstName}}</th>
-      <th>{{lastName}}</th>
-      <th>{{age}}</th>
-      <th>{{gender}}</th>
-      <th>{{options}}</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let customer of data">
-      <td>{{customer.firstName}}</td>
-      <td>{{customer.lastName}}</td>
-      <td>{{customer.birthday}}</td>
-      <td>{{customer.gender}}</td>
-      <td>
-        <button>{{edit}}</button>
-        <button>{{delete}}</button>
-        <button>{{navi}}</button>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<router-outlet>
+</router-outlet>

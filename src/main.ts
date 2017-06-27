@@ -5,8 +5,6 @@ import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 import { masterData, navigationData } from './initialData';
 
-console.log(masterData, navigationData);
-
 if (localStorage.getItem('masterData') === null) {
   localStorage.setItem('masterData', JSON.stringify(masterData));
 }
